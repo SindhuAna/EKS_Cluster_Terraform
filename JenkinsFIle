@@ -15,8 +15,9 @@ pipeline {
                 deleteDir()
 
                 // Clone the Git repository
-                git branch: 'main',
-                    url: 'https://github.com/VenkatVGS/EKS_Cluster_Terraform.git'
+                git branch: 'Feature-Branch',
+                    credentialsId: 'github-creds'
+                    url: 'https://github.com/SindhuAna/EKS_Cluster_Terraform.git'
 
                 sh "ls -lart"
             }
